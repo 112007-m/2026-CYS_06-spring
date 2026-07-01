@@ -1,0 +1,32 @@
+[
+    {
+        "id": 1,
+        "name": "Notebook",
+        "quantity": 50,
+        "price": 2.99
+    },
+    {
+        "id": 2,
+        "name": "Pen",
+        "quantity": 120,
+        "price": 1.0
+    },
+    {
+        "id": 3,
+        "name": "USB Cable",
+        "quantity": 40,
+        "price": 8.5
+    },
+    {
+        "id": 4,
+        "name": "Tissue",
+        "quantity": 100,
+        "price": 3.0
+    },
+    {
+        "id": 5,
+        "name": "Juice",
+        "quantity": 200,
+        "price": 50.0
+    }
+]

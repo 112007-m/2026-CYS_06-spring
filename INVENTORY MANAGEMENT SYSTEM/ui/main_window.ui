@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Inventory Management System</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QLabel" name="titleLabel">
+      <property name="text">
+       <string>Simple Inventory Manager</string>
+      </property>
+      <property name="alignment">
+       <set>Qt::AlignCenter</set>
+      </property>
+      <property name="styleSheet">
+       <string>font-size: 18px; font-weight: bold; padding: 8px;</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <layout class="QHBoxLayout" name="contentLayout">
+      <item>
+       <widget class="QGroupBox" name="formGroupBox">
+        <property name="title">
+         <string>Add / Edit Item</string>
+        </property>
+        <layout class="QFormLayout" name="formLayout">
+         <item row="0" column="0">
+          <widget class="QLabel" name="nameLabel">
+           <property name="text">
+            <string>Product Name:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QLineEdit" name="nameInput">
+           <property name="placeholderText">
+            <string>e.g. Notebook</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="0">
+          <widget class="QLabel" name="quantityLabel">
+           <property name="text">
+            <string>Quantity:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="1" column="1">
+          <widget class="QSpinBox" name="quantityInput">
+           <property name="minimum">
+            <number>0</number>
+           </property>
+           <property name="maximum">
+            <number>99999</number>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="0">
+          <widget class="QLabel" name="priceLabel">
+           <property name="text">
+            <string>Price ($):</string>
+           </property>
+          </widget>
+         </item>
+         <item row="2" column="1">
+          <widget class="QDoubleSpinBox" name="priceInput">
+           <property name="decimals">
+            <number>2</number>
+           </property>
+           <property name="maximum">
+            <double>999999.990000000005239</double>
+           </property>
+          </widget>
+         </item>
+         <item row="3" column="0" colspan="2">
+          <layout class="QHBoxLayout" name="buttonLayout">
+           <item>
+            <widget class="QPushButton" name="addButton">
+             <property name="text">
+              <string>Add Item</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="updateButton">
+             <property name="text">
+              <string>Update</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="deleteButton">
+             <property name="text">
+              <string>Delete</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="clearButton">
+             <property name="text">
+              <string>Clear Form</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </widget>
+      </item>
+      <item>
+       <widget class="QGroupBox" name="tableGroupBox">
+        <property name="title">
+         <string>Inventory List</string>
+        </property>
+        <layout class="QVBoxLayout" name="tableLayout">
+         <item>
+          <widget class="QLineEdit" name="searchInput">
+           <property name="placeholderText">
+            <string>Search by product name...</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="inventoryTable">
+           <property name="editTriggers">
+            <set>QAbstractItemView::NoEditTriggers</set>
+           </property>
+           <property name="selectionBehavior">
+            <enum>QAbstractItemView::SelectRows</enum>
+           </property>
+           <property name="selectionMode">
+            <enum>QAbstractItemView::SingleSelection</enum>
+           </property>
+           <column>
+            <property name="text">
+             <string>ID</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Product Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Quantity</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Price ($)</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </widget>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
